@@ -6,82 +6,152 @@
     <title>College Hub</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body class="bg-dark text-white">
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-black bg-black shadow-lg fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-black bg-black">
         <div class="container-fluid">
-            <!-- Logo -->
             <a class="navbar-brand" href="#">
-                <img src="images/logo.svg" alt="CollegeHub logo" height="50px">
+                <img src="images/logo.svg" alt="CollegeHub logo" class="img-fluid" style="height: 50px;">
             </a>
-
-            <!-- Nav Links (Now in One Row) -->
             <div class="d-flex ms-auto align-items-center gap-4">
-                <a class="nav-link text-light" href="aboutus.html">About Us</a>
                 <a class="nav-link text-light d-flex align-items-center gap-2" href="login.html">
-                    <i class="bi bi-person-circle fs-2"></i> Login
+                    <i class="bi bi-person-circle fs-2"></i> Sign In
                 </a>
             </div>
         </div>
     </nav>
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide " data-bs-ride="carousel" data-bs-pause="hover">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/carousel1.svg" alt="image1" class="d-block w-100" >
-
-                <div class="container-fluid">
-                    <div class="carousel-caption text-start text-black">
-                        <h1>Honest Reviews</h1>
-                        <p class="fs-1">Share your reviews anonymously</p>
-                        <p><a class="btn btn-lg btn-primary" href="reviews.html">College Reviews</a></p>
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="images/carousel1.svg" class="d-block w-100">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Unfiltered College Reviews</h1>
+                        <p>Share your experience anonymously and help others.</p>
+                        <p><a class="btn btn-lg btn-primary" href="reviews.html">Explore Reviews</a></p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="carousel-inner">
-            <div class="carousel-item ">
-                <img src="images/carousel2.svg" alt="image2" class="d-block w-100" >
-
-                <div class="container-fluid">
-                    <div class="carousel-caption text-start text-black">
-                        <h1>Get a Ride</h1>
-                        <p class="fs-1">Want a ride?Ask someone from your College</p>
-                        <p><a class="btn btn-lg btn-primary" href="rideshare.html">Get a Ride</a></p>
+            <div class="carousel-item" data-bs-interval="4000">
+                <img src="images/carousel2.svg" class="d-block w-100">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Find a Ride Buddy</h1>
+                        <p>Carpool with fellow students and save money.</p>
+                        <p><a class="btn btn-lg btn-primary" href="rideshare.html">Find a Ride</a></p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="carousel-inner">
-            <div class="carousel-item ">
-                <img src="images/carousel3.svg" alt="image3" class="d-block w-100" >
-
-                <div class="container-fluid">
-                    <div class="carousel-caption text-start text-black">
-                        <h1>College Memes</h1>
-                        <p class="fs-1">Create and explore memes of your College</p>
-                        <p><a class="btn btn-lg btn-primary" href="rideshare.html">Memes!!!</a></p>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/carousel3.svg" class="d-block w-100">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>College Memes Galore</h1>
+                        <p>Create and enjoy trending memes from your campus.</p>
+                        <p><a class="btn btn-lg btn-primary" href="memes.html">Check Memes</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <br>
+    <hr class="featurette-divider container">
 
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card bg-warning text-black shadow-lg border-0 h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Reviews</h5>
+                        <p class="card-text text-muted">Share your experience anonymously and help others make informed decisions.</p>
+                        <a href="reviews.html" class="btn btn-dark w-100">Explore Reviews</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="card bg-warning text-black shadow-lg border-0 h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Ride Share</h5>
+                        <p class="card-text text-muted">Carpool with fellow students, save money, and make new friends.</p>
+                        <a href="rideshare.html" class="btn btn-dark w-100">Find a Ride</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+                <div class="card bg-warning text-black shadow-lg border-0 h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Memes</h5>
+                        <p class="card-text text-muted">Laugh and create trending memes from your campus life.</p>
+                        <a href="memes.html" class="btn btn-dark w-100">View Memes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="featurette-divider container">
+    <br>
 
-    <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> College Hub</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 bg-warning text-black p-5 rounded featurette">
+                <h1>Anonymous College Reviews</h1>
+                <p>Our College Reviews feature allows students to share their experiences without revealing their identity. Users can rate their college on factors like academics, campus life, faculty, and placements. The platform ensures anonymity, so you can be honest without hesitation. Simply log in, choose your college, and submit a review—it helps future students make better choices!</p>
+            </div>
+            <div class="col-md-5">
+                <img src="images/carousel1.svg" class="featurett" alt="">
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr class="featurette-divider container">
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="images/carousel2.svg" class="featurett" alt="">
+            </div>
+            <div class="col-md-7 bg-warning text-black p-5 rounded featurette">
+                <h1>Ride Sharing for Students</h1>
+                <p>The Ride Share feature connects students looking for carpooling options. Whether you need a ride or have extra space in your vehicle, just enter your pickup location, destination, and preferred time. Our system will match you with fellow students traveling the same route, helping you save money and reduce your carbon footprint!</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <hr class="featurette-divider container">
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 bg-warning text-black p-5 rounded featurette">
+                <h1>College Meme Hub</h1>
+                <p>The Meme Hub lets students create and share funny, relatable memes about college life. You can upload images, add text, and customize fonts with our easy-to-use meme generator. Engage with others by liking, sharing, and commenting on trending memes from your campus. It’s the perfect way to unwind and bond with fellow students over humor!</p>
+            </div>
+            <div class="col-md-5">
+                <img src="images/carousel1.svg" class="featurett" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center mt-5">
+        <p><a href="#">Back to top</a></p>
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> College Hub</p>
+       
     </footer>
 
     <script src="js/bootstrap.bundle.js"></script>
