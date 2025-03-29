@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: PT Serif , Arial, sans-serif;
     background-color: #121212;
     color: #ffffff;
 }
@@ -13,11 +13,22 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
 }
-
+.carousel-item img {
+    height: 300px;
+    object-fit: cover;
+}
 .text-warning.bg-warning {
     color: #FFA31A !important;
 }
+.btn-success{
+    background-color: #FFA31A !important;
+    border-color: #FFA31A !important;
+}
 
+.card .btn-primary {
+    background-color: #2d3f09 !important;
+    border-color: #626F47 !important;
+}
 /* Navbar Hover Effect (Desktop Only) */
 @media (min-width: 992px) {
     .nav-item .nav-link:hover {
