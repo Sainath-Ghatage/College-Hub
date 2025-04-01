@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: PT Serif , Arial, sans-serif;
-    background-color: #121212;
+    background-color: #333333;
     color: #ffffff;
 }
 
@@ -26,8 +26,8 @@ body {
 }
 
 .card .btn-primary {
-    background-color: #2d3f09 !important;
-    border-color: #626F47 !important;
+    background-color: #3D5300 !important;
+    border-color: #3D5300 !important;
 }
 /* Navbar Hover Effect (Desktop Only) */
 @media (min-width: 992px) {

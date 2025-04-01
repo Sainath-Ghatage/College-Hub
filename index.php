@@ -16,29 +16,29 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cardo:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
-<body class="bg-dark text-white ">    
+<body class=" text-white ">    
 
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand bg-black rounded-3 p-2" href="#">College <span class="text-warning">Hub</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contactus">Contact Us</a></li>
-                    <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
-                        <li class="nav-item"><a class="btn btn-danger" href="login/logout.php">Logout</a></li>
-                    <?php else: ?>
-                        <li class="nav-item"><a class="btn btn-success" href="login/login.html">Login</a></li>
-                    <?php endif; ?>
-                </ul>
-            </div>
+    <div class="container">
+        <a class="navbar-brand" href="#">College <span class="bg-warning text-dark rounded-4 p-2">Hub</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contactus">Contact Us</a></li> <!-- Fixed Link -->
+                <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true): ?>
+                    <li class="nav-item"><a class="btn btn-danger" href="login/logout.php">Logout</a></li>
+                <?php else: ?>
+                    <li class="nav-item"><a class="btn btn-success" href="login/login.html">Login</a></li>
+                <?php endif; ?>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- Carousel -->
     <div id="featureCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
@@ -98,7 +98,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         <div class="card-body bg-warning">
                             <h4 class="card-title">Ride Share</h4>
                             <p class="card-text">Carpool with fellow students, save money, and make new friends.</p>
-                            <a href="rides/rides.php" class="btn btn-primary">Find a Ride</a>
+                            <a href="rides/rides.php" class="btn btn-primary" target="#">Find a Ride</a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ if (session_status() === PHP_SESSION_NONE) {
                         <div class="card-body bg-warning">
                             <h4 class="card-title">Memes</h4>
                             <p class="card-text">Laugh and create trending memes from your campus life.</p>
-                            <a href="memes.html" class="btn btn-primary">View Memes</a>
+                            <a href="memes/memes.php" class="btn btn-primary" target="#">View Memes</a>
                         </div>
                     </div>
                 </div>
@@ -173,80 +173,77 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <!--Contact Us Section-->
 
-    <section id="contactus">
-        <div class="container bg-warning text-black rounded-4" id="animate">
-            <div class="container p-3">
-                <div class="row">
-                    <!-- Left Section -->
-                    <div class="col-md-6">
-                        <h1 class="fw-bold">Contact Us</h1>
-                        <p>Email, call, or complete the form to learn how Snappy can solve your messaging problem.</p>
-                        <p class="fw-bold">CollegeHub@gamil.com</p>
-                        <p class="fw-bold">321-221-231</p>
-                    
-                        <div class="social-icons my-4">
-                            <a href="https://facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
-                            <a href="https://twitter.com" target="_blank" class="me-3"><i class="bi bi-twitter"></i></a>
-                            <a href="https://instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram"></i></a>
-                            <a href="https://linkedin.com" target="_blank" class="me-3"><i class="bi bi-linkedin"></i></a>
-                            <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube"></i></a>
-                        </div>
-                        
-                        <a href="#" class="fw-bold text-decoration-none ">Customer Support</a>
+  <!-- Contact Us Section -->
+<section id="contact" class="py-5">
+    <div class="container bg-warning text-black rounded-4 shadow-lg p-4" id="animate">
+        <div class="row">
+            <!-- Left Section -->
+            <div class="col-lg-6 mb-4">
+                <h1 class="fw-bold">Contact Us</h1>
+                <p class="lead">Email, call, or complete the form to learn how Snappy can solve your messaging problem.</p>
+                
+                <p class="fw-bold"><i class="bi bi-envelope-fill me-2"></i> CollegeHub@gmail.com</p>
+                <p class="fw-bold"><i class="bi bi-telephone-fill me-2"></i> 321-221-231</p>
+                
+                <div class="social-icons my-3">
+                    <a href="https://facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook fs-4"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="me-3"><i class="bi bi-twitter fs-4"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="me-3"><i class="bi bi-linkedin fs-4"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube fs-4"></i></a>
+                </div>
 
-                        <div class="mt-4">
-                            <h5 class="fw-bold">Customer Support</h5>
-                            <p>Our support team is available around the clock to address any concerns or queries you may have.</p>
-            
-                            <h5 class="fw-bold">Feedback and Suggestions</h5>
-                            <p>We value your feedback and continuously work to improve College Hub.</p>
-            
-                            <h5 class="fw-bold">Media Inquiries</h5>
-                            <p>For media-related questions or press inquiries, contact us at <a href="mailto:CollegeHub@gamil.com">CollegeHub@gamil.com</a>.</p>
+                <h5 class="fw-bold">Customer Support</h5>
+                <p>Our support team is available 24/7 to assist you with any concerns.</p>
+
+                <h5 class="fw-bold">Feedback & Suggestions</h5>
+                <p>We value your input and are constantly working to improve College Hub.</p>
+
+                <h5 class="fw-bold">Media Inquiries</h5>
+                <p>For press-related inquiries, contact us at <a href="mailto:CollegeHub@gmail.com" class="fw-bold text-decoration-none">CollegeHub@gmail.com</a>.</p>
+            </div>
+
+            <!-- Right Section (Form) -->
+            <div class="col-lg-6">
+                <div class="bg-white text-black rounded-4 p-4 shadow">
+                    <h3 class="fw-bold">Get in Touch</h3>
+                    <p>You can reach us anytime</p>
+                    <form action="feedback.php" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="first_name" class="form-control" placeholder="First name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="last_name" class="form-control" placeholder="Last name" required>
+                            </div>
                         </div>
-                    </div>
-            
-                    <!-- Right Section (Form) -->
-                    <div class="col-md-6 bg-white text-black rounded-4">
-                        <div class="contact-form p-3">
-                            <h3 class="fw-bold">Get in Touch</h3>
-                            <p>You can reach us anytime</p>
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control mb-3" placeholder="First name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control mb-3" placeholder="Last name">
-                                    </div>
-                                </div>
-                                <input type="email" class="form-control mb-3" placeholder="Your email">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <select class="form-select mb-3">
-                                            <option selected>+91</option>
-                                            <option>+62</option>
-                                            <option>+1</option>
-                                            <option>+44</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control mb-3" placeholder="Phone number">
-                                    </div>
-                                </div>
-                                <textarea class="form-control mb-3" rows="3" placeholder="How can we help?" maxlength="120"></textarea>
-                                <button type="submit" class="btn btn-submit btn-primary">Submit</button>
-                                <p class="mt-3 text-muted text-center">
-                                    By contacting us, you agree to our <a href="#" class="fw-bold text-decoration-none">Terms of Service</a> and 
-                                    <a href="#" class="fw-bold text-decoration-none">Privacy Policy</a>.
-                                </p>
-                            </form>
+                        <input type="email" name="email" class="form-control my-3" placeholder="Your email" required>
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <select class="form-select" name="country_code" required>
+                                    <option value="91" selected>+91</option>
+                                    <option value="62">+62</option>
+                                    <option value="1">+1</option>
+                                    <option value="44">+44</option>
+                                </select>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="phone_number" placeholder="Phone number" required>
+                            </div>
                         </div>
-                    </div>
+                        <textarea class="form-control my-3" name="message" rows="3" placeholder="How can we help?" maxlength="250" required></textarea>
+                        <button type="submit" class="btn btn-primary w-100 fw-bold">Submit</button>
+                        <p class="mt-3 text-muted text-center">
+                            By contacting us, you agree to our <a href="#" class="fw-bold text-decoration-none">Terms of Service</a> and 
+                            <a href="#" class="fw-bold text-decoration-none">Privacy Policy</a>.
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <br>
     <hr class="featurette-divider container">
